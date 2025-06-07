@@ -18,7 +18,7 @@
     "webp",
     "avif"
   ],
-  "author": "Tu Nombre",
+  "author": "Arling Holguin",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.0.0",
