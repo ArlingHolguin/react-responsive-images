@@ -1,0 +1,32 @@
+{
+  "name": "react-responsive-images",
+  "version": "1.0.0",
+  "description": "Componente React para renderizar imágenes responsivas usando <picture>, con soporte para webp/avif.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "react",
+    "responsive",
+    "images",
+    "typescript",
+    "webp",
+    "avif"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.8.3"
+  }
+}
