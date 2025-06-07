@@ -52,6 +52,58 @@ export function Example() {
 
 ---
 
+## ⚙️ Uso con Vite + vite-imagetools
+
+Puedes usar esta librería fácilmente con `vite-imagetools` para importar imágenes con diferentes formatos y resoluciones de forma automática.
+
+### Requisitos
+
+Instala `vite-imagetools`:
+
+```bash
+npm install vite-imagetools --save-dev
+```
+
+Agrega a tu `vite.config.ts`:
+
+```ts
+import { imagetools } from 'vite-imagetools';
+
+export default defineConfig({
+  plugins: [imagetools()],
+});
+```
+
+### Ejemplo de uso
+
+```tsx
+// @ts-ignore
+import image from "~/assets/foto.jpg?w=640;1280&format=webp;jpeg&as=metadata";
+
+<SourceSet
+  alt="Mi foto"
+  defaultCase={image[0]}
+  imgs={[{ image }]}
+/>
+```
+
+Opcionalmente, puedes declarar los tipos para evitar warnings de TypeScript:
+
+```ts
+// vite-env.d.ts
+declare module '*&as=metadata' {
+  const metadata: {
+    format: string;
+    src: string;
+    width: number;
+    height: number;
+  }[];
+  export default metadata;
+}
+```
+
+---
+
 ## 🧩 Uso en Laravel + React (Inertia)
 
 Si estás usando Laravel 12 con React y tienes productos con una sola imagen (por ejemplo, desde `/storage`), puedes enviar la imagen desde el controlador así:
