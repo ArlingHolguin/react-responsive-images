@@ -7,6 +7,14 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArlingHolguin/react-responsive-images.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArlingHolguin/react-responsive-images/issues"
+  },
+  "homepage": "https://github.com/ArlingHolguin/react-responsive-images#readme",
   "scripts": {
     "build": "tsc"
   },
